@@ -1,5 +1,6 @@
 import { query, getSql } from '../config/db.js';
 import { hashPassword } from './auth.js';
+import { defaultLogoBase64 } from '../assets/logo.js';
 
 export const getSchemas = () => ({
     MYSQL: [
@@ -62,7 +63,7 @@ const getSeedData = async () => {
             { id: 'banner-01', clientName: 'Sponsor Principale', imageUrl: 'https://picsum.photos/seed/banner1/1200/200', targetUrl: 'https://google.com' }
         ],
         settings: [
-            { keyName: 'logo', value: 'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500' },
+            { keyName: 'logo', value: defaultLogoBase64 },
             { keyName: 'welcomeText', value: 'Benvenuto nella tua Community App!' }
         ]
     };

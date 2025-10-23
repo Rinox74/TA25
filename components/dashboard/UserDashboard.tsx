@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { useData } from '../../contexts/DataContext';
 import { Event, Article } from '../../types';
@@ -37,7 +38,7 @@ export const UserDashboard: React.FC<{setView: (view: string, data?: any) => voi
 
   return (
     <div className="p-4 sm:p-6 lg:p-8 space-y-8">
-      <h1 className="text-3xl font-bold text-slate-800 dark:text-white">Benvenuto!</h1>
+      <h1 className="text-3xl font-bold text-slate-800 dark:text-white">Benvenuto in APP25</h1>
       
       {mainBanner && (
         <div className="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-md">

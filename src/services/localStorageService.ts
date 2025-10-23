@@ -1,5 +1,6 @@
 import { User, Role, Event, Article, Banner, ChatMessage, AppNotification, NotificationType, AppSettings, DbType, Ticket } from '../types';
 import { v4 as uuidv4 } from 'uuid';
+import { defaultLogoBase64 } from '../assets/logo';
 
 const STORAGE_KEY = 'TA25_DEMO_DATA';
 
@@ -39,7 +40,7 @@ const getInitialData = () => {
          { id: 'notif-01', type: NotificationType.NEW_EVENT, message: 'Nuovo evento pubblicato: Conferenza Tech 2024!', relatedId: 'event-01', is_read: true, createdAt: new Date().toISOString() }
     ],
     settings: {
-        logo: 'https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500', // A default logo
+        logo: defaultLogoBase64,
         welcomeText: 'Benvenuto nella modalità demo!',
         dbType: DbType.NONE
     }

@@ -67,7 +67,7 @@ export const WordpressDownloadModal: React.FC<{ isOpen: boolean; onClose: () => 
                     <p className="font-semibold">È fondamentale che il file `asset-manifest.json` sia presente, altrimenti il plugin non funzionerà.</p>
 
                     <h4>Passo 3: Installa e Attiva</h4>
-                    <p>Comprimi nuovamente la cartella del plugin in un file `.zip`. Dal pannello di amministrazione di WordPress, vai su `Plugin - Aggiungi Nuovo - Carica Plugin` e carica il file zip. Infine, attivalo.</p>
+                    <p>Comprimi nuovamente la cartella del plugin in un file `.zip`. Dal pannello di amministrazione di WordPress, vai su `Plugin > Aggiungi Nuovo > Carica Plugin` e carica il file zip. Infine, attivalo.</p>
 
                     <p className="text-lg font-bold">Fatto! L'applicazione è ora la tua homepage.</p>
                     <p>Visitando il tuo sito, vedrai l'applicazione React caricata al posto del tuo tema. Non è richiesta nessun'altra configurazione.</p>
