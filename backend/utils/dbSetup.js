@@ -64,7 +64,13 @@ const getSeedData = async () => {
         ],
         settings: [
             { keyName: 'logo', value: defaultLogoBase64 },
-            { keyName: 'welcomeText', value: 'Benvenuto nella tua Community App!' }
+            { keyName: 'welcomeText', value: 'Benvenuti nella Fondazione Taranto 25' },
+            { keyName: 'dbType', value: 'MYSQL' },
+            { keyName: 'dbHost', value: '185.221.175.33' },
+            { keyName: 'dbPort', value: '3306' },
+            { keyName: 'dbUser', value: 'krxrbauj_ta25' },
+            { keyName: 'dbPassword', value: 'zEa4eKfhSaQRWsExjeGK' },
+            { keyName: 'dbName', value: 'krxrbauj_ta25' },
         ]
     };
 };

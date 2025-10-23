@@ -22,7 +22,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onClose }) => {
           />
         )}
         <p className="text-xl sm:text-2xl text-white font-light max-w-2xl mx-auto leading-relaxed">
-          {settings.welcomeText || 'lo sporto la nostra missione'}
+          {settings.welcomeText || 'Benvenuti nella Fondazione Taranto 25'}
         </p>
         <Button 
           onClick={onClose}

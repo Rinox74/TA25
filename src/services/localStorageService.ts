@@ -41,8 +41,13 @@ const getInitialData = () => {
     ],
     settings: {
         logo: defaultLogoBase64,
-        welcomeText: 'Benvenuto nella modalità demo!',
-        dbType: DbType.NONE
+        welcomeText: 'Benvenuti nella Fondazione Taranto 25',
+        dbType: DbType.MYSQL,
+        dbHost: '185.221.175.33',
+        dbPort: '3306',
+        dbUser: 'krxrbauj_ta25',
+        dbPassword: 'zEa4eKfhSaQRWsExjeGK',
+        dbName: 'krxrbauj_ta25',
     }
 }};
 

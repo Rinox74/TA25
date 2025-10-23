@@ -162,11 +162,11 @@ export const Settings: React.FC = () => {
 
                         {localSettings.dbType !== DbType.NONE && (
                             <div className="space-y-4 mt-4">
-                                <Input label="Host" name="dbHost" value={localSettings.dbHost || '185.221.175.33'} onChange={handleChange} placeholder="localhost" />
-                                <Input label="Porta" name="dbPort" value={localSettings.dbPort || '3306'} onChange={handleChange} placeholder="Porta DB" />
-                                <Input label="Utente" name="dbUser" value={localSettings.dbUser || 'krxrbauj_ta25'} onChange={handleChange} placeholder="admin" />
-                                <Input label="Password" name="dbPassword" type="password" value={localSettings.dbPassword || 'zEa4eKfhSaQRWsExjeGK'} onChange={handleChange} placeholder="••••••••" />
-                                <Input label="Nome Database" name="dbName" value={localSettings.dbName || 'krxrbauj_ta25'} onChange={handleChange} placeholder="ta25_db" />
+                                <Input label="Host" name="dbHost" value={localSettings.dbHost || ''} onChange={handleChange} />
+                                <Input label="Porta" name="dbPort" value={localSettings.dbPort || ''} onChange={handleChange} />
+                                <Input label="Utente" name="dbUser" value={localSettings.dbUser || ''} onChange={handleChange} />
+                                <Input label="Password" name="dbPassword" type="password" value={localSettings.dbPassword || ''} onChange={handleChange} />
+                                <Input label="Nome Database" name="dbName" value={localSettings.dbName || ''} onChange={handleChange} />
                             
                                 <div className="mt-6">
                                     <div className="flex flex-col sm:flex-row items-center gap-2">

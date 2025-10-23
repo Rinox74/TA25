@@ -3,6 +3,7 @@ import { Event, Article, Banner, ChatMessage, User, Role, AppNotification, AppSe
 import { apiService } from '../services/apiService';
 import { localStorageService } from '../services/localStorageService';
 import { useAuth } from './AuthContext';
+import { defaultLogoBase64 } from '../assets/logo';
 
 interface DataContextType {
   events: Event[];
@@ -39,14 +40,14 @@ interface DataContextType {
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
 const DEFAULT_SETTINGS: AppSettings = { 
-    logo: '',
-    welcomeText: 'Benvenuto!',
-    dbType: DbType.NONE,
-    dbHost: '',
-    dbPort: '',
-    dbUser: '',
-    dbPassword: '',
-    dbName: '',
+    logo: defaultLogoBase64,
+    welcomeText: 'Benvenuti nella Fondazione Taranto 25',
+    dbType: DbType.MYSQL,
+    dbHost: '185.221.175.33',
+    dbPort: '3306',
+    dbUser: 'krxrbauj_ta25',
+    dbPassword: 'zEa4eKfhSaQRWsExjeGK',
+    dbName: 'krxrbauj_ta25',
 };
 
 export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -93,7 +94,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setArticles(articlesData);
       setBanners(bannersData);
       setChatMessages(chatData);
-      setSettings(settingsData || DEFAULT_SETTINGS);
+      // CORRECTED LOGIC: Always merge fetched settings with defaults.
+      // This ensures that any setting not present in the database
+      // will fall back to its default value from DEFAULT_SETTINGS.
+      setSettings({ ...DEFAULT_SETTINGS, ...settingsData });
 
       if (isAuthenticated) {
          const [usersData, notificationsData, ticketsData] = await Promise.all([
